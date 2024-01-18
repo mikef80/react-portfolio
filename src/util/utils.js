@@ -14,7 +14,7 @@ export const octoFetch = async () => {
   });
 
   const mappedArray = await Promise.all(
-    items.map(async ({ name, description, html_url: url }) => {
+    items.map(async ({ id, name, description, html_url: url }) => {
       const { data: languages } = await octokit.rest.repos.listLanguages({
         owner: "mikef80",
         repo: name,
@@ -28,7 +28,7 @@ export const octoFetch = async () => {
 
       languages.total = langCount;
 
-      return { name, description, url, languages };
+      return { id, name, description, url, languages };
     })
   );
 
