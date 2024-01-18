@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 
 export const App = () => {
   return (
-    <div className="mb-10">
+    <div className='h-screen max-w-[540px] mx-auto md:max-w-[768px] lg:max-w-[1000px]'>
       <Header />
       <Intro />
       <Projects />
