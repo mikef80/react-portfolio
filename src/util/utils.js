@@ -11,6 +11,8 @@ export const octoFetch = async () => {
     data: { items },
   } = await octokit.rest.search.repos({
     q: "user:mikef80+topic:portfolio-project",
+    sort: "updated",
+    order:'desc'
   });
 
   const mappedArray = await Promise.all(
