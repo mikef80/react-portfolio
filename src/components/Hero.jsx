@@ -8,9 +8,12 @@ const Hero = () => {
   top-1/2
   left-[12.5%]
   mix-blend-screen
+  dark:mix-blend-hard-light
+
   text-center
   -translate-y-1/2
   bg-white
+  dark:bg-black
   py-1
   xs:py-2
   sm:w-1/2
@@ -19,11 +22,11 @@ const Hero = () => {
 
   return (
     <div className='relative pb-2'>
-      {/* <img
+      <img
         src={Beach}
-        className=' sm:aspect-video sm:aspect-[3.2/1] aspect-[2/1] object-cover'
-        alt=''
-      /> */}
+        className='dark:grayscale sm:aspect-video sm:aspect-[3.2/1] aspect-[2/1] object-cover'
+        alt='Mike Francis - Junior Full Stack Developer'
+      />
       {/* <img src={Beach} className=" aspect-video aspect-[3.2/1] object-cover" alt='' /> */}
       <div className={classes}>
         {/* <h1 className='text-6xl '>Mike Francis</h1> */}
