@@ -4,7 +4,7 @@ import { restEndpointMethods } from "@octokit/plugin-rest-endpoint-methods";
 export const octoFetch = async () => {
   const MyOctokit = Octokit.plugin(restEndpointMethods);
   const octokit = new MyOctokit({
-    auth: "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",
+    auth: import.meta.env.REACT_APP_GITHUBTOKEN,
   });
 
   const {
@@ -12,7 +12,7 @@ export const octoFetch = async () => {
   } = await octokit.rest.search.repos({
     q: "user:mikef80+topic:portfolio-project",
     sort: "updated",
-    order:'desc'
+    order: "desc",
   });
 
   const mappedArray = await Promise.all(
