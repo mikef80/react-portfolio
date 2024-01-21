@@ -21,7 +21,6 @@ const Projects = () => {
     return (
       <div className='px-2 pb-9'>
         <h3 className='text-2xl pb-2'>Projects</h3>
-        <p>These are some of the projects that I've built:</p>
         <ul className='flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-y-5'>
           {repos.map(({ id, name, description, url }) => {
             return (
