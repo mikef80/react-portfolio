@@ -25,7 +25,7 @@ const Hero = () => {
     <div className='relative pb-2'>
       <img
         src={Beach}
-        className='dark:grayscale sm:aspect-video sm:aspect-[3.2/1] aspect-[2/1] object-cover'
+        className='dark:grayscale sm:aspect-video sm:aspect-[16/9] aspect-[2/1] object-cover'
         alt='Mike Francis - Junior Full Stack Developer'
       />
       <div className={classes}>
