@@ -8,7 +8,7 @@ export const Intro = () => {
         Junior Developer.
         
         I live on the Cornish coast, a stone's throw from the sea. I would love
-        to hear from you if you are local to Cornwall, or if you are happy with
+        to hear from you if you are local to Cornwall, or if you embrace
         remote working, as I don't like to be away from my family for long!
         <br />
         <br />
