@@ -1,9 +1,7 @@
 import Chapel from "/chapel.jpeg";
 import Beach from "/beach.jpeg";
-import { annotate } from "rough-notation";
-import { useEffect } from "react";
 
-const Hero = ({ darkMode }) => {
+const Hero = () => {
   const classes = `
   absolute
   xs:w-3/4
@@ -15,24 +13,15 @@ const Hero = ({ darkMode }) => {
   dark:mix-blend-hard-light
   text-center
   -translate-y-1/2
+  bg-white
+  dark:bg-black
+  dark:bg-opacity-80
+  bg-opacity-90
   py-1
   xs:py-2
   md:w-1/2
   md:left-1/4
   `;
-
-  useEffect(() => {
-    const e = document.querySelectorAll("#main_header");
-
-    e.forEach((item) => {
-      const annotation = annotate(item, {
-        type: "highlight",
-        color: darkMode ? "black" : "white",
-        multiline: true,
-      });
-      annotation.show();
-    });
-  }, [darkMode]);
 
   return (
     <div className='relative pb-2'>
@@ -42,10 +31,8 @@ const Hero = ({ darkMode }) => {
         alt='Mike Francis - Junior Full Stack Developer'
       />
       <div className={classes}>
-        <h1 id='main_header' className='text-4xl sm:text-4xl  md:text-6xl'>
-          Mike Francis
-        </h1>
-        <h2 id='main_header' className='pb-2 text-xl xs:text-2xl md:text-3xl'>
+        <h1 className='text-4xl sm:text-4xl  md:text-6xl'>Mike Francis</h1>
+        <h2 className='pb-2 text-xl xs:text-2xl md:text-3xl'>
           Junior Full Stack Developer
         </h2>
       </div>
