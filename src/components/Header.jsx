@@ -11,11 +11,24 @@ import Hero from "./Hero";
 export const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    if (document.documentElement.classList.contains("dark")) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
   const toggleDarkMode = () => {
-    // set something in localStorage to remember darkmode preferences
-    setDarkMode(() => !darkMode);
-    const html = document.querySelector("html");
-    html.classList.toggle("dark");
+    if (darkMode) {
+      setDarkMode(false);
+      localStorage.theme = "light";
+      document.documentElement.classList.remove('dark')
+    } else {
+      setDarkMode(true);
+      localStorage.theme = "dark";
+      document.documentElement.classList.add('dark')
+    }
   };
 
   return (
