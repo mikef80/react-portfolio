@@ -19,25 +19,28 @@ export const Header = () => {
   };
 
   return (
-    <header className='flex flex-col items-center pb-2'>
-      <div className='flex gap-7 pb-2'>
-        <a href='https://github.com/mikef80'>
-          <img
-            src={darkMode ? GithubMarkWhite : GithubMark}
-            alt='Github'
-            className='w-8'
-          />
-        </a>
-        <a href='https://www.linkedin.com/in/mpfrancis/'>
-          <img src={LinkedInLogo} alt='LinkedIn' />
-        </a>
-        <button onClick={() => toggleDarkMode()}>
-          <img
-            src={darkMode ? MoonIcon : SunIcon}
-            alt='toggle dark mode on and off'
-          />
-        </button>
-      </div>
-    </header>
+    <>
+      <Hero darkMode={darkMode} />
+      <header className='flex flex-col items-center pb-2'>
+        <div className='flex gap-7 pb-2'>
+          <a href='https://github.com/mikef80'>
+            <img
+              src={darkMode ? GithubMarkWhite : GithubMark}
+              alt='Github'
+              className='w-8'
+            />
+          </a>
+          <a href='https://www.linkedin.com/in/mpfrancis/'>
+            <img src={LinkedInLogo} alt='LinkedIn' />
+          </a>
+          <button onClick={() => toggleDarkMode()}>
+            <img
+              src={darkMode ? MoonIcon : SunIcon}
+              alt='toggle dark mode on and off'
+            />
+          </button>
+        </div>
+      </header>
+    </>
   );
 };
