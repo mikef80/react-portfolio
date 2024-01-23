@@ -1,7 +1,8 @@
 import Chapel from "/chapel.jpeg";
 import Beach from "/beach.jpeg";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
-const Hero = () => {
+const Hero = ({ darkMode }) => {
   const classes = `
   absolute
   xs:w-3/4
@@ -13,10 +14,6 @@ const Hero = () => {
   dark:mix-blend-hard-light
   text-center
   -translate-y-1/2
-  bg-white
-  dark:bg-black
-  dark:bg-opacity-80
-  bg-opacity-90
   py-1
   xs:py-2
   md:w-1/2
@@ -31,10 +28,16 @@ const Hero = () => {
         alt='Mike Francis - Junior Full Stack Developer'
       />
       <div className={classes}>
-        <h1 className='text-4xl sm:text-4xl  md:text-6xl'>Mike Francis</h1>
-        <h2 className='pb-2 text-xl xs:text-2xl md:text-3xl'>
-          Junior Full Stack Developer
-        </h2>
+        <RoughNotationGroup show={true}>
+          <RoughNotation type='highlight' color={darkMode ? "black" : "white"}>
+            <h1 className='text-4xl sm:text-4xl  md:text-6xl'>Mike Francis</h1>
+          </RoughNotation>
+          <RoughNotation type='highlight' color={darkMode ? "black" : "white"}>
+            <h2 className='pb-2 text-xl xs:text-2xl md:text-3xl'>
+              Junior Full Stack Developer
+            </h2>
+          </RoughNotation>
+        </RoughNotationGroup>
       </div>
     </div>
   );
