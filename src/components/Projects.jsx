@@ -6,12 +6,12 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  /* useEffect(() => {
+  useEffect(() => {
     setIsLoading(true);
     octoFetch()
       .then((arr) => setRepos(arr))
       .then(() => setIsLoading(false));
-  }, []); */
+  }, []);
 
   if (isLoading) {
     return <Loading />;
