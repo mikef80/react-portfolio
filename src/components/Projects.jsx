@@ -4,7 +4,7 @@ import Loading from "./Loading";
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -13,14 +13,13 @@ const Projects = () => {
       .then(() => setIsLoading(false));
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  if (repos.length) {
-    return (
-      <div className='px-2 pb-9'>
-        <h3 className='text-2xl pb-2'>Projects</h3>
+  
+  return (
+    <div className='px-2 pb-9 flex flex-col grow'>
+      <h3 className='text-2xl pb-2'>Projects</h3>
+      {isLoading ? (
+        <Loading />
+      ) : (
         <ul className='flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-y-5'>
           {repos.map(({ id, name, description, url }) => {
             return (
@@ -37,9 +36,10 @@ const Projects = () => {
             );
           })}
         </ul>
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
+  
 };
 
 export default Projects;
