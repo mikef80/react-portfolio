@@ -10,7 +10,7 @@ export const App = () => {
       <main className='max-w-[540px] mx-auto md:max-w-[768px] lg:max-w-[1000px] flex flex-col min-h-screen'>
         <Header />
         <Intro />
-        {/* <Projects /> */}
+        <Projects />
       </main>
       <Footer />
     </div>
