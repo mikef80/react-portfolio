@@ -54,28 +54,30 @@ const Projects = () => {
                 key={id}
                 className={`border-b-[1px] border-gray-300 p-4 last-of-type:border-0 md:last-of-type:border-b-[1px] `}>
                 {/* <a href={url}> */}
-                  <div className='flex justify-between mb-1'>
-                    <h4 className='text-xl'>{name}</h4>
-                    <div className='flex justify-between overflow-hidden gap-2'>
-                      <a href={url} target="_blank">
-                        <img
-                          src={Code}
-                          alt=''
-                          style={darkMode ? darkModeStyle : {}}
-                          className='h-7'
-                        />
-                      </a>
-                      {homepage && <a href={homepage} target="_blank">
+                <div className='flex justify-between mb-1'>
+                  <h4 className='text-xl'>{name}</h4>
+                  <div className='flex justify-between overflow-hidden gap-2'>
+                    {homepage && (
+                      <a href={homepage} target='_blank'>
                         <img
                           src={Web}
                           alt=''
                           style={darkMode ? darkModeStyle : {}}
                           className='h-7'
                         />
-                      </a>}
-                    </div>
+                      </a>
+                    )}
+                    <a href={url} target='_blank'>
+                      <img
+                        src={Code}
+                        alt=''
+                        style={darkMode ? darkModeStyle : {}}
+                        className='h-7'
+                      />
+                    </a>
                   </div>
-                  <p className='text-gray-500 dark:text-gray-400'>{description}</p>
+                </div>
+                <p className='text-gray-500 dark:text-gray-400'>{description}</p>
                 {/* </a> */}
               </li>
             );
