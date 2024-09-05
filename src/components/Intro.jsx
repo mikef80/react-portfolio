@@ -4,8 +4,7 @@ export const Intro = () => {
       <h3 className='text-2xl pb-2'>About Me</h3>
       <p>
         Hi, I'm Mike. In January 2024, I completed a Software Developer bootcamp
-        with Northcoders and I am now on the lookout for my first role as a
-        Junior Developer.
+        with Northcoders and I am currently working as a Junior Developer.
         
         I live on the Cornish coast, a stone's throw from the sea. I would love
         to hear from you if you are local to Cornwall or if you embrace
@@ -15,7 +14,7 @@ export const Intro = () => {
       </p>
       <p>
         I have mainly focused on React development, with my Bootcamp using the
-        M.E.R.N stack. However, I love learning, so am happy to turn my hand to
+        P.E.R.N stack. However, I love learning, so am happy to turn my hand to
         other languages and technologies.
         <br />
         <br />
