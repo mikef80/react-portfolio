@@ -13,10 +13,7 @@ export const octoFetch = async () => {
     q: "user:mikef80+topic:portfolio-project",
     sort: "updated",
     order: "desc",
-  });
-
-  console.log(items);
-  
+  });  
 
   const mappedArray = await Promise.all(
     items.map(async ({ id, name, description, html_url: url, homepage }) => {
