@@ -57,7 +57,7 @@ const Projects = () => {
                   <div className='flex justify-between mb-1'>
                     <h4 className='text-xl'>{name}</h4>
                     <div className='flex justify-between overflow-hidden gap-2'>
-                      <a href={url}>
+                      <a href={url} target="_blank">
                         <img
                           src={Code}
                           alt=''
@@ -65,7 +65,7 @@ const Projects = () => {
                           className='h-7'
                         />
                       </a>
-                      {homepage && <a href={homepage}>
+                      {homepage && <a href={homepage} target="_blank">
                         <img
                           src={Web}
                           alt=''
