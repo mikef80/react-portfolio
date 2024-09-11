@@ -22,6 +22,7 @@ const Projects = () => {
         CSS: 58,
         total: 10922,
       },
+      updated_at: "2024-05-16T20:26:56Z",
     },
   ]);
 
@@ -48,7 +49,12 @@ const Projects = () => {
         <Loading />
       ) : (
         <ul className='flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-y-5'>
-          {repos.map(({ id, name, description, url, homepage }) => {
+          {repos.map(({ id, name, description, url, homepage, updated_at }) => {
+            const date = new Date(updated_at);
+            const options = { year: "numeric", month: "long", day: "numeric" };
+            const ukDate = date.toLocaleDateString("en-GB", options);
+            const ukTime = date.toLocaleTimeString("en-GB");
+
             return (
               <li
                 key={id}
@@ -78,6 +84,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <p className='text-gray-500 dark:text-gray-400'>{description}</p>
+                <p className='text-gray-500 dark:text-gray-600 text-xs pt-2'>Updated: {`${ukDate}, ${ukTime}`}</p>
                 {/* </a> */}
               </li>
             );
